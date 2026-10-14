@@ -1914,9 +1914,9 @@
 
     var cards = [
       { label: 'وافق على الاشتراك', val: c.yes, col: '#10B981', tint: 'rgba(16, 185, 129, 0.12)', brd: 'rgba(16, 185, 129, 0.35)', sub: 'عميل مشترك' },
-      { label: 'لم يوافق (رفض)',   val: c.no,  col: '#F87171', tint: 'rgba(239, 68, 68, 0.12)',  brd: 'rgba(239, 68, 68, 0.35)',  sub: 'اعتذر عن التفعيل' },
+      { label: 'لم يوافق (رفض)',   val: c.no,  col: '#F87171', tint: 'rgba(239, 68, 68, 0.12)',  brd: 'rgba(239, 68, 68, 0.35)',  sub: ' لا يفعل' },
       { label: 'لم يرد على الاتصال', val: c.na,  col: '#FBBF24', tint: 'rgba(245, 158, 11, 0.12)', brd: 'rgba(245, 158, 11, 0.35)', sub: 'بانتظار المحاولة' },
-      { label: 'اتصل لاحقاً (تأجيل)', val: c.cb,  col: '#60A5FA', tint: 'rgba(59, 130, 246, 0.12)', brd: 'rgba(59, 130, 246, 0.35)', sub: 'متابعة مجدولة' }
+      { label: 'بعدين هوة يتصل', val: c.cb,  col: '#60A5FA', tint: 'rgba(59, 130, 246, 0.12)', brd: 'rgba(59, 130, 246, 0.35)', sub: 'يخابرنة فيما بعد' }
     ];
 
     var gridY = 552, cardW = (W - 152 - 28) / 2, cardH = 205;
@@ -1999,7 +1999,7 @@
     x.textAlign = 'center';
     x.fillStyle = '#64748B';
     x.font = '500 18px ' + F;
-    x.fillText('تم التوليد تلقائياً عبر نظام قائمة اتصال اليوم • ' + hhmm(), W / 2, 1290);
+    x.fillText(' تم التوليد  عبر نظام قائمة اتصال اليوم  الخاص بابوالحسن• ' + hhmm(), W / 2, 1290);
 
     return new Promise(function (res) { cv.toBlob(res, 'image/png'); });
   }
@@ -2147,11 +2147,11 @@
     if (rem === 0) {
       emoji = '👑'; name = 'تم القضاء على زعيم القائمة!'; if (!window.__heroDone) { window.__heroDone = 1; setTimeout(function () { Hero.react('laugh', 4000); }, 600); }
     } else if (pct <= 15) {
-      emoji = '👻'; name = 'طيف الأرقام الأخير (يرتعد!)';
+      emoji = '👻'; name = 'طيف الأرقام الأخير (يالله كضت!)';
     } else if (pct <= 40) {
       emoji = '👾'; name = 'وحش الروتين المنهك';
     } else if (pct <= 75) {
-      emoji = '👹'; name = 'غول القائمة الغاضب (درعه متصدّع)';
+      emoji = '👹'; name = 'غول القائمة الغاضب ( مابقه شي)';
     }
     $('boss-emoji').textContent = emoji;
     $('boss-name').textContent = name;
